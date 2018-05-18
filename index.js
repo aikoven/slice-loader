@@ -71,10 +71,9 @@ module.exports = function(source) {
 
   var end = lines.indexOf('(typeof(global) !== "undefined" && typeof(global.process) !== "undefined" ? module : undefined,');
 
-  commentLine(end-1);
-  commentLine(end);
-  commentLine(end+1);
-  commentLine(end+2);
+  for (var i = end - 1; i < lines.length - 1; i++) {
+    commentLine(i);
+  }
 
   return lines.join('\n');
 };
