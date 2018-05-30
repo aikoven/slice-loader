@@ -12,6 +12,9 @@
   "author": "Daniel Lytkin <dan.lytkin@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "loader-utils": "^0.2.16"
+    "loader-utils": "^1.1.0"
+  },
+  "peerDependencies": {
+    "webpack": "^4.0.0"
   }
 }

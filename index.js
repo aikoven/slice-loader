@@ -4,9 +4,9 @@ var loaderUtils = require('loader-utils');
 module.exports = function(source) {
   this.cacheable && this.cacheable();
 
-  var config = loaderUtils.getLoaderConfig(this, 'sliceLoader');
+  var options = loaderUtils.getOptions(this) || {};
 
-  if (!config.node) {
+  if (!options.node) {
     // replace with browser version if it exists
     var browserPath = this.resourcePath.replace(/\w+\.js$/, 'browser/$&');
 
